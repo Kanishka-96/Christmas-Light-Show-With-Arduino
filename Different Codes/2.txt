@@ -1,0 +1,557 @@
+int tree1 = 2;
+int tree2 = 3;
+int tree3 = 4;
+int tree4 = 5;
+int tree5 = 6;
+int tree6 = 7;
+int tree7 = 8;
+int tree8 = 9;
+int s = 150;
+int ds = 225;
+int e = 300;
+int de = 450;
+int q = 600;
+int dq = 900;
+int h = 1200;
+int dh = 1800;
+
+
+int pPin = 0;
+
+void setup()
+{
+  pinMode(tree1, OUTPUT);
+  pinMode(tree2, OUTPUT);
+  pinMode(tree3, OUTPUT);
+  pinMode(tree4, OUTPUT);
+  pinMode(tree5, OUTPUT);
+  pinMode(tree6, OUTPUT);
+  pinMode(tree7, OUTPUT);
+  pinMode(tree8, OUTPUT);
+  digitalWrite(tree1,LOW);
+  delay(1000);
+  digitalWrite(tree2,LOW);
+  delay(1000);
+  digitalWrite(tree3,LOW);
+  delay(1000);
+  digitalWrite(tree4,LOW);
+  delay(1000);
+  digitalWrite(tree5,LOW);
+  delay(1000);
+  digitalWrite(tree6,LOW);
+  delay(1000);
+  digitalWrite(tree7,LOW);
+  delay(1000);
+  digitalWrite(tree8,LOW);
+  delay(1000);
+  digitalWrite(tree1,HIGH);
+  digitalWrite(tree2,HIGH);
+  digitalWrite(tree3,HIGH);
+  digitalWrite(tree4,HIGH);
+  digitalWrite(tree5,HIGH);
+  digitalWrite(tree6,HIGH);
+  digitalWrite(tree7,HIGH);
+  digitalWrite(tree8,HIGH);
+
+}
+
+void loop()
+{
+
+
+  // event 1
+  noTone(pPin);
+    digitalWrite(tree1, LOW);
+  digitalWrite(tree8, LOW);
+  tone(pPin, 261.63); // c4
+  delay(q);
+  noTone(pPin);
+  digitalWrite(tree1, HIGH);
+  digitalWrite(tree8, HIGH);
+  // event 2
+  digitalWrite(tree2, LOW);
+  digitalWrite(tree7, LOW);
+  tone(pPin, 246.94);  // b3
+  delay(de);
+  noTone(pPin);
+  digitalWrite(tree2, HIGH);
+  digitalWrite(tree7, HIGH);
+  // event 3
+  digitalWrite(tree3, LOW);
+  digitalWrite(tree6, LOW);
+  tone(pPin, 220); // a3
+  delay(s);
+  noTone(pPin);
+  digitalWrite(tree3, HIGH);
+  digitalWrite(tree6, HIGH);
+  // event 4
+  digitalWrite(tree4, LOW);
+  digitalWrite(tree5, LOW);
+  tone(pPin, 196); // g3
+  delay(1050);
+  noTone(pPin);
+  digitalWrite(tree4, HIGH);
+  digitalWrite(tree5, HIGH);
+  // event 5
+  digitalWrite(tree1, LOW);
+  digitalWrite(tree8, LOW);
+  tone(pPin, 174.61); //f3
+  delay(s);
+  noTone(pPin);
+  digitalWrite(tree1, HIGH);
+  digitalWrite(tree8, HIGH);
+  // event 6
+  digitalWrite(tree2, LOW);
+  digitalWrite(tree7, LOW);
+  tone(pPin, 164.81); //e3
+  delay(q);
+  noTone(pPin);
+  digitalWrite(tree2, HIGH);
+  digitalWrite(tree7, HIGH);
+  // event 7
+  digitalWrite(tree3, LOW);
+  digitalWrite(tree6, LOW);
+  tone(pPin, 146.83); // d3
+  delay(q);
+  noTone(pPin);
+  digitalWrite(tree3, HIGH);
+  digitalWrite(tree6, HIGH);
+  // event 8
+  digitalWrite(tree4, LOW);
+  digitalWrite(tree5, LOW);
+  tone(pPin, 130.81); //c3
+  delay(dq);
+  noTone(pPin);
+  digitalWrite(tree4, HIGH);
+  digitalWrite(tree5, HIGH);
+  // event 9
+  digitalWrite(tree1, LOW);
+  digitalWrite(tree2, LOW);
+  digitalWrite(tree7, LOW);
+  digitalWrite(tree8, LOW);
+  tone(pPin, 196); // g3
+  delay(e);
+  noTone(pPin);
+  digitalWrite(tree1, HIGH);
+  digitalWrite(tree2, HIGH);
+  digitalWrite(tree7, HIGH);
+  digitalWrite(tree8, HIGH);
+  // event 10
+  digitalWrite(tree2, LOW);
+  digitalWrite(tree3, LOW);
+  digitalWrite(tree6, LOW);
+  digitalWrite(tree7, LOW);
+  tone(pPin, 220); // a3
+  delay(dq);
+  noTone(pPin);
+  digitalWrite(tree2, HIGH);
+  digitalWrite(tree3, HIGH);
+  digitalWrite(tree6, HIGH);
+  digitalWrite(tree7, HIGH);
+  // event 11
+  digitalWrite(tree1, LOW);
+  digitalWrite(tree2, LOW);
+  digitalWrite(tree7, LOW);
+  digitalWrite(tree8, LOW);
+  tone(pPin, 220);  // a3
+  delay(e);
+  noTone(pPin);
+  digitalWrite(tree1, HIGH);
+  digitalWrite(tree2, HIGH);
+  digitalWrite(tree7, HIGH);
+  digitalWrite(tree8, HIGH);
+  // event 12
+  digitalWrite(tree3, LOW);
+  digitalWrite(tree4, LOW);
+  digitalWrite(tree5, LOW);
+  digitalWrite(tree6, LOW);
+  tone(pPin, 246.94); //b3
+  delay(dq);
+  noTone(pPin);
+  digitalWrite(tree3, HIGH);
+  digitalWrite(tree4, HIGH);
+  digitalWrite(tree5, HIGH);
+  digitalWrite(tree6, HIGH);
+  // event 13
+  digitalWrite(tree1, LOW);
+  digitalWrite(tree2, LOW);
+  digitalWrite(tree7, LOW);
+  digitalWrite(tree8, LOW);
+  tone(pPin, 246.94);  //b3
+  delay(e);
+  noTone(pPin);
+  digitalWrite(tree1, HIGH);
+  digitalWrite(tree2, HIGH);
+  digitalWrite(tree7, HIGH);
+  digitalWrite(tree8, HIGH);
+  // event 14
+  digitalWrite(tree1, LOW);
+  digitalWrite(tree2, LOW);
+  digitalWrite(tree3, LOW);
+  digitalWrite(tree4, LOW);
+  digitalWrite(tree5, LOW);
+  digitalWrite(tree6, LOW);
+  digitalWrite(tree7, LOW);
+  digitalWrite(tree8, LOW);
+  tone(pPin, 261.63); //c4
+  delay(dq);
+  noTone(pPin);
+  digitalWrite(tree1, HIGH);
+  digitalWrite(tree2, HIGH);
+  digitalWrite(tree3, HIGH);
+  digitalWrite(tree4, HIGH);
+  digitalWrite(tree5, HIGH);
+  digitalWrite(tree6, HIGH);
+  digitalWrite(tree7, HIGH);
+  digitalWrite(tree8, HIGH);
+  // event 15
+  digitalWrite(tree8, LOW);
+  tone(pPin, 261.63); //c4
+  delay(e);
+  noTone(pPin);
+  digitalWrite(tree8, HIGH);
+  // event 16
+  digitalWrite(tree1, LOW);
+  tone(pPin, 261.63); //c4
+  delay(e);
+  noTone(pPin);
+  digitalWrite(tree1, HIGH);
+  // event 17
+  digitalWrite(tree7, LOW);
+  tone(pPin, 246.94); //b3
+  delay(e);
+  noTone(pPin);
+  digitalWrite(tree7, HIGH); 
+  // event 18
+  digitalWrite(tree2, LOW);
+  tone(pPin, 220); //a3
+  delay(e);
+  noTone(pPin);
+  digitalWrite(tree2, HIGH);
+  // event 19
+  digitalWrite(tree6, LOW);
+  tone(pPin, 196); //g3
+  delay(e);
+  noTone(pPin);
+  digitalWrite(tree6, HIGH);
+  // event 20
+  digitalWrite(tree3, LOW);
+  tone(pPin, 196); //g3
+  delay(de);
+  noTone(pPin);
+  digitalWrite(tree3, HIGH);
+  // event 21
+  digitalWrite(tree5, LOW);
+  tone(pPin, 174.61); //f3
+  delay(s);
+  noTone(pPin);
+  digitalWrite(tree5, HIGH);
+  // event 22
+  digitalWrite(tree4, LOW);
+  tone(pPin, 164.81); //e3
+  delay(e);
+  noTone(pPin);
+  digitalWrite(tree4, HIGH);
+  // event 23
+  digitalWrite(tree8, LOW);
+  tone(pPin, 261.63); //c4
+  delay(e);
+  noTone(pPin);
+  digitalWrite(tree8, HIGH);
+  // event 24
+  digitalWrite(tree1, LOW);
+  tone(pPin, 261.63); //c4
+  delay(e);
+  noTone(pPin);
+  digitalWrite(tree1, HIGH);
+  // event 25
+  digitalWrite(tree7, LOW);
+  tone(pPin, 246.94); //b3
+  delay(e);
+  noTone(pPin);
+  digitalWrite(tree7, HIGH); 
+  // event 26
+  digitalWrite(tree2, LOW);
+  tone(pPin, 220); //a3
+  delay(e);
+  noTone(pPin);
+  digitalWrite(tree2, HIGH);
+  // event 27
+  digitalWrite(tree6, LOW);
+  tone(pPin, 196); //g3
+  delay(e);
+  noTone(pPin);
+  digitalWrite(tree6, HIGH);
+  // event 27 
+  digitalWrite(tree3, LOW);
+  tone(pPin, 196); //g3
+  delay(de);
+  noTone(pPin);
+  digitalWrite(tree3, HIGH);
+  // event 29
+  digitalWrite(tree5, LOW);
+  tone(pPin, 174.61); //f3
+  delay(s);
+  noTone(pPin);
+  digitalWrite(tree5, HIGH);
+  // event 30 
+  digitalWrite(tree4, LOW);
+  tone(pPin, 164.81); //e3
+  delay(e);
+  noTone(pPin);
+  digitalWrite(tree4, HIGH);
+  // event 31 
+  digitalWrite(tree2, LOW);
+  digitalWrite(tree7, LOW);
+  tone(pPin, 164.81); //e3
+  delay(e);
+  noTone(pPin);
+  digitalWrite(tree2, HIGH);
+  digitalWrite(tree7, HIGH);
+  // event 32 
+  digitalWrite(tree1, LOW);
+  digitalWrite(tree8, LOW);
+  tone(pPin, 164.81); //e3
+  delay(e);
+  noTone(pPin);
+  digitalWrite(tree1, HIGH);
+  digitalWrite(tree8, HIGH);
+  // event 33 
+  digitalWrite(tree2, LOW);
+  digitalWrite(tree7, LOW);
+  tone(pPin, 164.81); //e3
+  delay(e);
+  noTone(pPin);
+  digitalWrite(tree2, HIGH);
+  digitalWrite(tree7, HIGH);
+  // event 34 
+  digitalWrite(tree1, LOW);
+  digitalWrite(tree8, LOW);
+  tone(pPin, 164.81); //e3
+  delay(e);
+  noTone(pPin);
+  digitalWrite(tree1, HIGH);
+  digitalWrite(tree8, HIGH);
+  // event 35 
+  digitalWrite(tree2, LOW);
+  digitalWrite(tree7, LOW);
+  tone(pPin, 164.81); //e3
+  delay(75);
+  noTone(pPin);
+  digitalWrite(tree2, HIGH);
+  digitalWrite(tree7, HIGH);
+  // event 36 
+  digitalWrite(tree3, LOW);
+  digitalWrite(tree6, LOW);
+  tone(pPin, 174.61); //f3
+  delay(75);
+  noTone(pPin);
+  digitalWrite(tree3, HIGH);
+  digitalWrite(tree6, HIGH);
+  // event 37 
+  digitalWrite(tree4, LOW);
+  digitalWrite(tree5, LOW);
+  tone(pPin, 196); //g3
+  delay(dq);
+  noTone(pPin);
+  digitalWrite(tree4, HIGH);
+  digitalWrite(tree5, HIGH);
+  // event 38 
+  digitalWrite(tree4, LOW);
+  digitalWrite(tree5, LOW);
+  tone(pPin, 174.61); //f3
+  delay(75);
+  noTone(pPin);
+  digitalWrite(tree4, HIGH);
+  digitalWrite(tree5, HIGH);
+  // event 39 
+  digitalWrite(tree3, LOW);
+  digitalWrite(tree6, LOW);
+  tone(pPin, 164.81); //e3
+  delay(75);
+  noTone(pPin);
+  digitalWrite(tree3, HIGH);
+  digitalWrite(tree6, HIGH);
+  // event 40 
+  digitalWrite(tree4, LOW);
+  digitalWrite(tree5, LOW);
+  tone(pPin, 146.83); //d3
+  delay(e);
+  noTone(pPin);
+  digitalWrite(tree4, HIGH);
+  digitalWrite(tree5, HIGH);
+  // event 41 
+  digitalWrite(tree3, LOW);
+  digitalWrite(tree6, LOW);
+  tone(pPin, 146.83); //d3
+  delay(e);
+  noTone(pPin);
+  digitalWrite(tree3, HIGH);
+  digitalWrite(tree6, HIGH);
+  // event 42 
+  digitalWrite(tree4, LOW);
+  digitalWrite(tree5, LOW);
+  tone(pPin, 146.83); //d3
+  delay(e);
+  noTone(pPin);
+  digitalWrite(tree4, HIGH);
+  digitalWrite(tree5, HIGH);
+  // event 43 
+  digitalWrite(tree3, LOW);
+  digitalWrite(tree6, LOW);
+  tone(pPin, 146.83); //d3
+  delay(75);
+  noTone(pPin);
+  digitalWrite(tree3, HIGH);
+  digitalWrite(tree6, HIGH);
+  // event 44 
+  digitalWrite(tree2, LOW);
+  digitalWrite(tree7, LOW);
+  tone(pPin, 164.81); //e3
+  delay(75);
+  noTone(pPin);
+  digitalWrite(tree2, HIGH);
+  digitalWrite(tree7, HIGH);
+  // event 45 
+  digitalWrite(tree1, LOW);
+  digitalWrite(tree8, LOW);
+  tone(pPin, 174.61); //f3
+  delay(dq);
+  noTone(pPin);
+  digitalWrite(tree1, HIGH);
+  digitalWrite(tree8, HIGH);
+  // event 46 
+  digitalWrite(tree1, LOW);
+  digitalWrite(tree2, LOW);
+  digitalWrite(tree7, LOW);
+  digitalWrite(tree8, LOW);
+  tone(pPin, 164.81); //e3
+  delay(75);
+  noTone(pPin);
+  digitalWrite(tree1, HIGH);
+  digitalWrite(tree2, HIGH);
+  digitalWrite(tree7, HIGH);
+  digitalWrite(tree8, HIGH);
+  // event 47 
+  digitalWrite(tree2, LOW);
+  digitalWrite(tree3, LOW);
+  digitalWrite(tree6, LOW);
+  digitalWrite(tree7, LOW);
+  tone(pPin, 146.83); //d3
+  delay(75);
+  noTone(pPin);
+  digitalWrite(tree2, HIGH);
+  digitalWrite(tree3, HIGH);
+  digitalWrite(tree6, HIGH);
+  digitalWrite(tree7, HIGH);
+  // event 48 
+  digitalWrite(tree3, LOW);
+  digitalWrite(tree4, LOW);
+  digitalWrite(tree5, LOW);
+  digitalWrite(tree6, LOW);
+  tone(pPin, 130.81); //c3
+  delay(e);
+  noTone(pPin);
+  digitalWrite(tree3, HIGH);
+  digitalWrite(tree4, HIGH);
+  digitalWrite(tree5, HIGH);
+  digitalWrite(tree6, HIGH);
+  // event 49 
+  digitalWrite(tree1, LOW);
+  digitalWrite(tree2, LOW);
+  digitalWrite(tree3, LOW);
+  digitalWrite(tree4, LOW);
+  digitalWrite(tree5, LOW);
+  digitalWrite(tree6, LOW);
+  digitalWrite(tree7, LOW);
+  digitalWrite(tree8, LOW);
+  tone(pPin, 261.63); //c4
+  delay(q);
+  noTone(pPin);
+  digitalWrite(tree1, HIGH);
+  digitalWrite(tree2, HIGH);
+  digitalWrite(tree3, HIGH);
+  digitalWrite(tree4, HIGH);
+  digitalWrite(tree5, HIGH);
+  digitalWrite(tree6, HIGH);
+  digitalWrite(tree7, HIGH);
+  digitalWrite(tree8, HIGH);
+  // event 50 
+  digitalWrite(tree1, LOW);
+  digitalWrite(tree8, LOW);
+  tone(pPin, 220); //a3
+  delay(e);
+  noTone(pPin);
+  digitalWrite(tree1, HIGH);
+  digitalWrite(tree8, HIGH);
+  // event 51 
+  digitalWrite(tree2, LOW);
+  digitalWrite(tree7, LOW);
+  tone(pPin, 196); //g3
+  delay(de);
+  noTone(pPin);
+  digitalWrite(tree2, HIGH);
+  digitalWrite(tree7, HIGH);
+  // event 52 
+  digitalWrite(tree3, LOW);
+  digitalWrite(tree6, LOW);
+  tone(pPin, 174.61); //f3
+  delay(s);
+  noTone(pPin);
+  digitalWrite(tree3, HIGH);
+  digitalWrite(tree6, HIGH);
+  // event 53 
+  digitalWrite(tree4, LOW);
+  digitalWrite(tree5, LOW);
+  tone(pPin, 164.81); //e3
+  delay(e);
+  noTone(pPin);
+  digitalWrite(tree4, HIGH);
+  digitalWrite(tree5, HIGH);
+  // event 54 
+  digitalWrite(tree3, LOW);
+  digitalWrite(tree6, LOW);
+  tone(pPin, 174.61); //f3
+  delay(e);
+  noTone(pPin);
+  digitalWrite(tree3, HIGH);
+  digitalWrite(tree6, HIGH);
+  // event 55 
+  digitalWrite(tree2, LOW);
+  digitalWrite(tree7, LOW);
+  tone(pPin, 164.81); //e3
+  delay(q);
+  noTone(pPin);
+  digitalWrite(tree2, HIGH);
+  digitalWrite(tree7, HIGH);
+  // event 56 
+  digitalWrite(tree1, LOW);
+  digitalWrite(tree8, LOW);
+  tone(pPin, 146.83); //d3
+  delay(q);
+  noTone(pPin);
+  digitalWrite(tree1, HIGH);
+  digitalWrite(tree8, HIGH);
+  // event 57 
+  digitalWrite(tree1, LOW);
+  digitalWrite(tree2, LOW);
+  digitalWrite(tree3, LOW);
+  digitalWrite(tree4, LOW);
+  digitalWrite(tree5, LOW);
+  digitalWrite(tree6, LOW);
+  digitalWrite(tree7, LOW);
+  digitalWrite(tree8, LOW);
+  tone(pPin, 130.81); //c3
+  delay(h);
+  noTone(pPin);
+  digitalWrite(tree1, HIGH);
+  digitalWrite(tree2, HIGH);
+  digitalWrite(tree3, HIGH);
+  digitalWrite(tree4, HIGH);
+  digitalWrite(tree5, HIGH);
+  digitalWrite(tree6, HIGH);
+  digitalWrite(tree7, HIGH);
+  digitalWrite(tree8, HIGH);
+  delay(10000);
+
+}

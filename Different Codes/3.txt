@@ -1,0 +1,52 @@
+int Tree1 = 2;
+int Tree2 = 3;
+int Tree3 = 4;
+int Tree4 = 5;
+int Tree5 = 6;
+int Tree6 = 7;
+int Tree7 = 8;
+int Tree8 = 9;
+
+int i = 0;
+int incomingByte[8];
+
+
+
+void setup(){
+Serial.begin(9600);
+pinMode(Tree1, OUTPUT);
+pinMode(Tree2, OUTPUT);
+pinMode(Tree3, OUTPUT);
+pinMode(Tree4, OUTPUT);
+pinMode(Tree5, OUTPUT);
+pinMode(Tree6, OUTPUT);
+pinMode(Tree7, OUTPUT);
+pinMode(Tree8, OUTPUT);
+
+Serial.print("System Ready");
+
+
+}
+
+void loop()
+{
+
+Serial.begin(9600);
+if (Serial.available() >= 8)
+{
+for (int i=0; i<8;i++)
+{
+incomingByte[i] = Serial.read();
+}
+digitalWrite(Tree1, incomingByte[0]);
+digitalWrite(Tree2, incomingByte[1]);
+digitalWrite(Tree3, incomingByte[2]);
+digitalWrite(Tree4, incomingByte[3]);
+digitalWrite(Tree5, incomingByte[4]);
+digitalWrite(Tree6, incomingByte[5]);
+digitalWrite(Tree7, incomingByte[6]);
+digitalWrite(Tree8, incomingByte[7]);
+Serial.println("System Ready");
+
+}
+}

@@ -1,0 +1,146 @@
+int relay1 = 2;
+int relay2 = 3;
+int relay3 = 4;
+int relay4 = 5;
+int relay5 = 6;
+int relay6 = 7;
+int relay7 = 8;
+int relay8 = 9;
+int time = 250;
+int timef = 450;
+int timeA = 500;
+int timeC = 250;
+
+void allOff() { // Declaring the function
+for(int x = 2; x < 10; x++){ //turns off lights
+digitalWrite(x, HIGH);
+}
+}
+
+void flashR(){
+digitalWrite(relay2, LOW);//flash r
+digitalWrite(relay4, LOW);
+digitalWrite(relay6, LOW);
+digitalWrite(relay8, LOW);
+delay(timef);
+}
+
+void flashW() {
+ digitalWrite(relay1, LOW);//flash w
+digitalWrite(relay3, LOW);
+digitalWrite(relay5, LOW);
+digitalWrite(relay7, LOW);
+delay(timef); 
+}
+void AlternateColors(){
+ digitalWrite(relay1, LOW);//alternate w/r
+digitalWrite(relay4, LOW);
+digitalWrite(relay5, LOW);
+digitalWrite(relay8, LOW);
+delay(timeA);
+allOff();
+digitalWrite(relay2, LOW);//flip colors
+digitalWrite(relay3, LOW);
+digitalWrite(relay6, LOW);
+digitalWrite(relay7, LOW);
+delay(timeA); 
+}
+
+void Wcounter(){
+ for(int x = 3; x <= 9; x=x+2){//counter w
+digitalWrite(x, LOW);
+delay(timeC);
+ }
+ for(int x = 9; x >= 3; x=x-2){//rewind counter w
+digitalWrite(x, HIGH);
+delay(timeC);
+ } 
+}
+
+void WcounterOpp(){
+ for(int x = 10; x >= 3; x=x-2){//back counter w
+digitalWrite(x, LOW);
+delay(timeC);
+ }
+ for(int x = 3; x <= 10; x=x+2){//back rewind counter w
+digitalWrite(x, HIGH);
+delay(timeC);
+ } 
+}
+void Rcounter(){
+  for(int x = 2; x < 10; x=x+2){//counter r
+digitalWrite(x, LOW);
+delay(timeC);
+}
+for(int x = 8; x > 2; x=x-2){//rewind  counter r
+digitalWrite(x, HIGH);
+delay(timeC);
+}
+}
+
+void RcounterOpp(){
+  for(int x = 8; x > 2; x=x-2){//Back counter r
+digitalWrite(x, LOW);
+delay(timeC);
+}
+for(int x = 2; x < 10; x=x+2){//Back rewind r
+digitalWrite(x, HIGH);
+delay(timeC);
+}
+}
+
+void counter(){
+ for(int x = 2; x < 10; x++){//single counter on/off
+digitalWrite(x, LOW);
+delay(time);
+digitalWrite(x, HIGH);
+delay(time);
+} 
+}
+
+void setup() {
+  // put your setup code here, to run once:
+pinMode(relay1, OUTPUT);
+pinMode(relay2, OUTPUT);
+pinMode(relay3, OUTPUT);
+pinMode(relay4, OUTPUT);
+pinMode(relay5, OUTPUT);
+pinMode(relay6, OUTPUT);
+pinMode(relay7, OUTPUT);
+pinMode(relay8, OUTPUT);
+}
+
+void loop() {
+  // put your main code here, to run repeatedly: 
+allOff();
+  counter();
+allOff();
+  Wcounter();
+    delay(timeC);
+allOff();
+  WcounterOpp();
+    delay(timeC);
+allOff();
+  Rcounter();
+    delay(timeC);
+allOff();
+  RcounterOpp();
+    delay(timeC);
+allOff();
+  flashR();
+allOff();
+  flashW();
+allOff();
+  flashR();
+allOff();
+  flashW();
+allOff();
+  flashR();
+allOff();
+  flashW();
+allOff();
+  AlternateColors();
+allOff();
+  AlternateColors();
+allOff();
+}
